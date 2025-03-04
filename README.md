@@ -10,6 +10,7 @@
 ## Key Takeaways
 
 / Get methods are difficult to work around with. With that mistake,  it's hard to pinpoint where yo get the errors. <br/>
+
 / I didn't solve the 'CANNOT GET /'. <br/>
 
 I'm following the right routing setup but it's not working well. So far, running the 'test.js' works fine appending the book information in the text file. However, it's not showing up in the local host site and only the status appears in it if searched for finding the isbn and author.
