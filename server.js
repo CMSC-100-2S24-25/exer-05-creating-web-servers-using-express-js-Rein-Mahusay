@@ -13,7 +13,8 @@ app.post('/add-book', (req, res) => {
     const { bkName, isbn, author, yearPub } = req.body;
 
     if (!bkName || !isbn || !author || !yearPub) {
-        return res.send({ success: false });
+        console.log("{success: false}");
+        return res.send({ message: 'All required fields.' });
     }
 
     //simple format for the book information added
@@ -37,11 +38,13 @@ app.post('/add-book', (req, res) => {
     //using same as the last exer
     if (fs.existsSync("books.txt")) {
         fs.appendFileSync("books.txt", data);
-        return res.send({ success: true });
+        console.log("{success:true}");
+        return res.send({ data: data });
     } else {
         fs.writeFileSync("books.txt");
         fs.appendFileSync("books.txt", data);
-        return res.send({ success: true });
+        console.log("{success:true}");
+        return res.send({ data: data });
     }
 
 });
